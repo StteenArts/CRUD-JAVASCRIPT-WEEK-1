@@ -107,7 +107,9 @@ tbody.addEventListener('click', (e) => {
             alert(persons.find(person => person.id == e.target.value));
             
         }else if(e.target.dataset.action == 'ver'){
-            alert('Hora de ver');
+            let indice = persons.findIndex(person => person.id == e.target.value);
+            person = persons.find(person => person.id == e.target.value);
+            alert(`Estas observando a #${person.id} - ${person.name} ${person.lastName  }`);
         }
     }
 })
